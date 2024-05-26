@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Commander Academy</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="intro-popup-container">
+      <div id="intro-popup">
+        <h2>Git Commander Academy</h2>
+        <p id="tagline">Got Git?</p>
+
+        <button class="intro-button" onclick="openInstructions()">
+          How to Play
+        </button>
+        <button class="intro-button" id="play-button">Play</button>
+      </div>
+    </div>
+
+    <nav id="navbar">
+
+      <div id="navbar-logo">Git Commander Academy</div>
+      <div class="navbar-icon" onclick = "openInstructions()" >
+        <span>?</span>
+      </div>
+      <div class="navbar-icon" onclick = "openSharePopup()" >
+        <span>!</span>
+      </div>
+
+  </nav>
+
+    <div id="rules-popup-container" style="display: none">
+      <div id="rules-popup">
+        <div id="close-rules-popup">
+          <span>X</span>
+        </div>
+        <h2>How to Play Git Commander Academy</h2>
+        <p>
+          The definition of a git command will appear on the screen.
+        </p>
+
+        <p>Using your keyboard or the on-screen keyboard, type the answer to the git command definition.</p>
+        <p>Each empty box represents one letter in the correct response. Press enter when you are ready to submit your answer.</p>
+        <p>If you are correct, you will receive the dollar amount displayed and will move to the next definition. If you are incorrect, the letters will turn red. You backspace to delete your letters and try again.</p>
+        <p>If you do not know the answer, click Skip! But you will not git a second chance on any skipped definition!</p>
+      </div>
+    </div>
+    <h1></h1>
+
+    <div id="card">
+      <div class="valuecard" id="flashcardValue">Word</div>
+
+      <div class="flashcard" id="flashcardDef">Word</div>
+    </div>
+
+    <div id="game-board"></div>
+
+    <button id="nextButton">Skip!</button>
+
+    <div id="score">$0</div>
+
+    <div id="keyboard-cont">
+      <div class="first-row">
+        <button class="keyboard-button">Q</button>
+        <button class="keyboard-button">W</button>
+        <button class="keyboard-button">E</button>
+        <button class="keyboard-button">R</button>
+        <button class="keyboard-button">T</button>
+        <button class="keyboard-button">Y</button>
+        <button class="keyboard-button">U</button>
+        <button class="keyboard-button">I</button>
+        <button class="keyboard-button">O</button>
+        <button class="keyboard-button">P</button>
+      </div>
+      <div class="second-row">
+        <button class="keyboard-button">A</button>
+        <button class="keyboard-button">S</button>
+        <button class="keyboard-button">D</button>
+        <button class="keyboard-button">F</button>
+        <button class="keyboard-button">G</button>
+        <button class="keyboard-button">H</button>
+        <button class="keyboard-button">J</button>
+        <button class="keyboard-button">K</button>
+        <button class="keyboard-button">L</button>
+      </div>
+      <div class="third-row">
+        <button class="keyboard-button-spec">Del</button>
+        <button class="keyboard-button">Z</button>
+        <button class="keyboard-button">X</button>
+        <button class="keyboard-button">C</button>
+        <button class="keyboard-button">V</button>
+        <button class="keyboard-button">B</button>
+        <button class="keyboard-button">N</button>
+        <button class="keyboard-button">M</button>
+        <button class="keyboard-button-spec">Enter</button>
+      </div>
+    </div>
+
+    <!-- Popup container for game result -->
+    <div id="share-popup-container">
+      <div id="share-popup">
+        <span id="close-share-popup">X</span>
+        <h2 id="game-result"></h2>
+        <p id="game-result-share" style="display: none"></p>
+        <button id="answers-button" onclick="answers()">
+          <span>See Answers</span>
+        </button>
+        <button id="hide-answers-button" onclick="hideAnswers()">
+          <span>Hide Answers</span>
+        </button>
+        <button id="play-again-button" onclick="playAgain()">
+          <span>Start Again</span>
+        </button>
+
+        <div id="card">
+          <div class="valuecard" id="flashcard-word-0">Word</div>
+          <div class="flashcard" id="flashcard-def-0">Word</div>
+          <div class="valuecard" id="flashcard-word-1">Word</div>
+          <div class="flashcard" id="flashcard-def-1">Word</div>
+          <div class="valuecard" id="flashcard-word-2">Word</div>
+          <div class="flashcard" id="flashcard-def-2">Word</div>
+          <div class="valuecard" id="flashcard-word-3">Word</div>
+          <div class="flashcard" id="flashcard-def-3">Word</div>
+          <div class="valuecard" id="flashcard-word-4">Word</div>
+          <div class="flashcard" id="flashcard-def-4">Word</div>
+          <div class="valuecard" id="flashcard-word-5">Word</div>
+          <div class="flashcard" id="flashcard-def-5">Word</div>
+          <div class="valuecard" id="flashcard-word-6">Word</div>
+          <div class="flashcard" id="flashcard-def-6">Word</div>
+          <div class="valuecard" id="flashcard-word-7">Word</div>
+          <div class="flashcard" id="flashcard-def-7">Word</div>
+          <div class="valuecard" id="flashcard-word-8">Word</div>
+          <div class="flashcard" id="flashcard-def-8">Word</div>
+          <div class="valuecard" id="flashcard-word-9">Word</div>
+          <div class="flashcard" id="flashcard-def-9">Word</div>
+        </div>
+
+        <!-- <img id="logo" src="Swapple-Logo.png" />
+      </div> -->
+    </div>
+  </body>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="script.js"></script>
+  
+</html>
