@@ -222,6 +222,7 @@ button {
 }
 
 #navbar-logo {
+  font-size: 1.5em;
   font-size: 1em;
   font-weight: bold;
   margin-right: auto;
@@ -244,6 +245,40 @@ button {
 .navbar-icon span {
   color: black;
   font-size: 1.5em;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+#footer-copyright {
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: auto;
+  padding-left: 2rem;
+}
+
+.footer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 2rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #game-board {
@@ -281,6 +316,8 @@ button {
   margin: 2px;
   font-size: 3.5rem;
   font-weight: 700;
+  height: 4rem;
+  width: 4rem;
   height: 3rem;
   width: 3rem;
   display: flex;
