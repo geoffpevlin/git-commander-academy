@@ -260,8 +260,8 @@ button {
   z-index: 10;
 }
 
-#footer-logo {
-  font-size: 1.5em;
+#footer-copyright {
+  font-size: 1em;
   font-weight: bold;
   margin-right: auto;
   padding-left: 2rem;
